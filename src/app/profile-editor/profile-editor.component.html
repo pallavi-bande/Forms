@@ -39,6 +39,19 @@
         </label>
     </div>
 
+    <div formArrayName="aliases">
+        <h3>Aliases</h3>
+        <button (click)="addaliases()">Add Alias</button>
+        <div *ngFor="let Address of aliases.controls; i as index">
+
+            <label>
+                Alias:<br>
+                <input type="text" formControlnName="i">
+            </label>
+
+        </div>
+    </div>
+
     <button type="submit" [disabled]="!ProfileForm.valid">Sumbit</button>
 
 </form>

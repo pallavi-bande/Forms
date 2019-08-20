@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { FormBuilder } from '@angular/forms';
+import { FormArray } from '@angular/forms';
+ import { FormBuilder } from '@angular/forms';
 import { Validators } from "@angular/forms";
 
 
@@ -20,9 +20,12 @@ ProfileForm =this.fb.group({
       state : [''],
       zip : [''],
 
-    })
-   
+    }),
+    aliases:this.fb.array([
+      this.fb.control('')
+    ])
   });
+  
   constructor(private fb: FormBuilder) {
   }
 
@@ -47,5 +50,10 @@ onSubmit()
   console.warn(this.ProfileForm.value);
 }
 
-
+get aliases(){
+return this.ProfileForm.get('aliases') as FormArray;
+}
+addaliases(){
+  this.aliases.push(this.fb.control(''));
+}
 }
