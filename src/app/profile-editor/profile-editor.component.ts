@@ -29,21 +29,23 @@ ProfileForm =this.fb.group({
 
   ngOnInit() {
   }
+
+  UpdateProfile(){
+    this.ProfileForm.patchValue({
+      firstName: 'pallavi',
+      lastName: 'bande',
+      Address:{
+        street: '123 narendra nagar',
+        city: 'nagpur',
+        state: 'MH',
+        zip : '440015'
+      }
+    });
+  }
 onSubmit()
 {
   console.warn(this.ProfileForm.value);
 }
-UpdateProfile(){
-  this.ProfileForm.patchValue({
-    firstName: 'pallavi',
-    lastName: 'bande',
-    Address:{
-      street: '123 narendra nagar',
-      city: 'nagpur',
-      state: 'MH',
-      zip : '440015'
-    }
-  });
 
-}
+
 }

@@ -14,6 +14,6 @@ name = new FormControl('');
   }
 updateName()
 {
-  this.name.setValue('sssss');
+  this.name.setValue('Pallavi');
 }
 }
