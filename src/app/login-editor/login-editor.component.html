@@ -1,0 +1,16 @@
+<form [formGroup]="LoginForm">
+    UserName:<br>
+    <input type="text" formControlName="username"><br>
+    PassWord:<br>
+    <input type="password" formControlName="password"><br>
+    FirstName:<br>
+    <input type="text" formControlName="first_name"><br>
+    LastName:<br>
+    <input type="text" formControlName="last_name"><br>
+    Email:<br>
+    <input type="text" formControlName="email"><br>
+    Mobile:<br>
+    <input type="text" formControlName="mobile"><br>
+   
+    <button (click)="submit()" >Sumbit</button>
+    </form>
